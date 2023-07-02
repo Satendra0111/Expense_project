@@ -1,5 +1,12 @@
+from valid_Date import *
+
 def expenseCreation():
-    date = input("please enter date: ")
+    date = input("please enter date in DD/MM/YYYY: ")
+    check=validate_Date(date)
+    while check!=True:
+        date = input("please enter the correct date format DD/MM/YYYY:: ")
+        check=validate_Date(date) 
+        
     category = input("please enter category: ")
     discreption = input("please enter discreption: ")
     amount = input("please enter amount: ")
